@@ -14,4 +14,14 @@ Get Git installed on your computer and sign up for a GitHub account if you do no
 > In case joining an ongoing project, ask the repository admin to add your GitHub account to the project and provide editing privileges. Next, jump to cloning the project on your computer.
 
 ## Creating a branch 
-Each repository has a default master branch. In case you need to create multiple branches, here is the process: 
+Each repository has a default master branch. In case you need to create new branches, create a branch using the branch menu selector on the GitHub repository page. 
+[Learn more](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository)
+
+## Creating a fork
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. To create a fork, click 'Fork' on the main page of the GitHub repository.  
+[Learn more](https://help.github.com/en/articles/fork-a-repo)
+
+Once the fork is created, configure a remote pointing an upstream repository to sync any changes between the fork and the original repository. [Learn more](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)
+
+Sync the fork of a repository to keep it up-to-date with the upstream repository, as needed. [Learn more](https://help.github.com/en/articles/syncing-a-fork)
+
