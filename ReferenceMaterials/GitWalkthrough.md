@@ -25,7 +25,7 @@ Once the fork is created, configure a remote pointing an upstream repository to 
 
 Sync the fork of a repository to keep it up-to-date with the upstream repository, as needed. [Learn more](https://help.github.com/en/articles/syncing-a-fork)
 
-## How to clone a project?
+# How to clone a project?
 1. Click "Clone or download" and copy the URL of the remote repository
 2. Go to the location on your computer where you would like to create the local repository and open Git Bash here.
 3. Create a directory where you want to save the local version of the repository
@@ -35,15 +35,15 @@ Sync the fork of a repository to keep it up-to-date with the upstream repository
 5. Before cloning, make sure that you are in the correct directory.
 [Learn more](https://help.github.com/en/articles/cloning-a-repository)
   
-## What is the common workflow?
+# What is the common workflow?
 Go to the local repository folder and right click to open Git bash here. This will ensure that you are in the right directory. Alternatively, you can come to the right directory by using the change directory command (cd) in the Git Bash. 
 
-### Pull
+## Pull
 Bringing all the changes from a branch of the remote repository to the local repository
 > git pull origin BranchName
 [Learn more]
 
-### Push 
+## Push 
 Saving all the changes made on the local repository to the remote repository
 > git add . && git commit -m "I have made local changes" && git push origin master
 
@@ -58,7 +58,7 @@ This will also merge your changes to the document with the remote repository. In
 
 Jump to "How to resolve conflict?" to learn about resolution process
 
-### How to run tests? Add link to Guillaume's Git document
+## How to run tests? Add link to Guillaume's Git document
 Install node (same place installed Git)
 
 Instructions for npm config
@@ -72,7 +72,7 @@ Note that the username required here is the one for your ESDC network. For examp
 Run npm commands from node. Ensure you are in the same folder as package.json
 > Ask REMY about his comment: need to add procedure to fetch remote branch into local store (i.e. after you've created a branch on the remote Repo, doing a git pull origin <branchname> will not download it. You need to create a local branch that tracks a remote branch.
 
-## How to resolve conflict?
+# How to resolve conflict?
 Open the local files where the conflict appears.
 
 The picture below shows the appearance of conflict in the file. The competing changes are separate by conflict markers <<<<<<<, =======, >>>>>>>.
@@ -85,17 +85,17 @@ There may be more than one merge conflict in a file. Manually resolve all the co
 Push the changes on the remote repository again
 > git add . && git commit -m 'I have made local changes' && git push origin master
 
-## How to create an issue?
+# How to create an issue?
 Github Help Guide: https://help.github.com/en/articles/creating-an-issue
 
-## Formatting in markdown files
+# Formatting in markdown files
 Standard formatting rules in a markdown file can be viewed here: https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md. 
 
-## Best practices (WIP)
+# Best practices (WIP)
 1. Start your day by a pull request to bring the changes made by your team to your local repository.
 2. Commit early and often, to reduce merge conflicts and foster continuous integration.
 
-## List of commonly used commands
+# List of commonly used commands
 cd
 ll
 ls
@@ -113,5 +113,5 @@ Checkout
 Fetch
 Merge
 
-## References
+# References
 [Github help guide](https://help.github.com/en) 
