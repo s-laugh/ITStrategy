@@ -40,7 +40,7 @@ Go to the local repository folder and right click to open Git bash here. This wi
 ### Pull
 Bringing all the changes from the remote repository to the local repository
 		git pull origin BranchName
-### PUSH 
+### Push 
 Saving all the changes made on the local repository to the remote repository
 		git add . && git commit -m "I have made local changes" && git push origin master
 	Alternatively, the commands can be typed in separately
@@ -54,8 +54,8 @@ Saving all the changes made on the local repository to the remote repository
 	This will also merge your changes to the document with the remote repository. In case, there is a conflict due to competing line changes, an error message will appear indicating the file where the conflict appears. 
 		Jump to "How to resolve conflict?" to learn about resolution process
 ### How to run tests? Add link to Guillaume's Git document
-Install node (same place installed Git)
-		Instructions for npm config  
+Install node (same place installed Git)  
+		Instructions for npm config    
 			npm config set proxy http://%USERNAME%@proxy.prv:80 
 			npm config set https-proxy http://%USERNAME%@proxy.prv:80 
 			setx HTTP_PROXY http://%USERNAME%@proxy.prv:80 
