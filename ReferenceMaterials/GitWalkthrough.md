@@ -75,7 +75,6 @@ Instructions for npm config
 Note that the username required here is the one for your ESDC network. For example, npm config set proxy http://jayson.mcintosh@proxy.prv:80
 
 Run npm commands from node. Ensure you are in the same folder as package.json
-> Ask REMY about his comment: need to add procedure to fetch remote branch into local store (i.e. after you've created a branch on the remote Repo, doing a git pull origin <branchname> will not download it. You need to create a local branch that tracks a remote branch.
 
 # How to resolve conflict?
 Open the local files where the conflict appears.
