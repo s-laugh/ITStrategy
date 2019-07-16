@@ -39,18 +39,23 @@ Sync the fork of a repository to keep it up-to-date with the upstream repository
 Go to the local repository folder and right click to open Git bash here. This will ensure that you are in the right directory. Alternatively, you can come to the right directory by using the change directory command (cd) in the Git Bash. 
 
 ## Pull
-Bringing all the changes from a branch of the remote repository to the local repository
-> git pull origin BranchName
+Bringing all the changes from the remote repository to the local repository (this will pull from the master branch)
+> git pull origin master
+
+To make local changes, create a new branch in your LOCAL directory to start making changes. 
+>	git checkout -b <BranchName>
+Now your local repository is setup to be in <branchname>, everything you do will be in this branch, not on master. Do whatever changes you need.
+
 [Learn more]
 
 ## Push 
 Saving all the changes made on the local repository to the remote repository
-> git add . && git commit -m "I have made local changes" && git push origin master
+> git add . && git commit -m "I have made local changes" && git push -u origin <BranchName>
 
 Alternatively, the commands can be typed in separately
 > git add .
 > git commit -m "Comments go here"
-> git push origin master
+> git push -u origin <BranchName>
 
 You will be required to type in your username and password. Password field will appear empty as you type. Just type the complete password and press enter. Please note that in cases where two factor authentication is enabled, you have to type in your personal access token instead of GitHub password to get access. 
 
