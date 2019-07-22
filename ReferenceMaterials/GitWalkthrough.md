@@ -29,9 +29,9 @@ Sync the fork of a repository to keep it up-to-date with the upstream repository
 1. Click "Clone or download" and copy the URL of the remote repository
 2. Go to the location on your computer where you would like to create the local repository and open Git Bash here.
 3. Create a directory where you want to save the local version of the repository
-> mkdir DirectoryName
+  mkdir DirectoryName
 4. Clone the repository using git clone command into the folder (directory name) on your local machine
-> git clone <URL of remote repository> 
+  git clone <URL of remote repository> 
 5. Before cloning, make sure that you are in the correct directory.
 [Learn more](https://help.github.com/en/articles/cloning-a-repository)
   
