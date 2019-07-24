@@ -21,7 +21,7 @@ Here are the steps to create a new repository through your GitHub account:
 ### Creating a branch 
 Each repository has a default master branch. In case you need to create new branches, create a branch using the branch menu selector on the GitHub repository page. 
 [Learn more](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository)
-In this case, the branch is created on the GitHub repository. You will need to [fetch] (Add link to the document section below) the changes on your local repository to work on the branch locally.
+In this case, the branch is created on the GitHub repository. You will need to [fetch](https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89) the changes on your local repository to work on the branch locally.
 
 You can also create a branch using Git bash. Here are the steps:
 1. Go to the local directory where you have created a copy of the repository and open Git Bash here.
