@@ -31,7 +31,7 @@ You can also create a branch using Git bash. Here are the steps:
 git checkout -b <BranchName>
 ```
 
-This creates a new branch in the local repository and also switches between the branch that can be edited on your local repository.
+This creates a new branch in the local repository and also switches between the branch that can be edited on your local repository.  
 3. To push the new branch on the remote repository, use the [pull] (Add link here) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
 
 ### Creating a fork
@@ -97,7 +97,7 @@ To simply switch between branches to work on in your local repository, use the f
 git checkout <BranchName>
 ```
 
-[Learn more]
+[Learn more](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
 ### Push 
 Saving all the changes made on the local repository to the remote repository
@@ -134,9 +134,9 @@ setx HTTP_PROXY http://%USERNAME%@proxy.prv:80 
 setx HTTPS_PROXY http://%USERNAME%@proxy.prv:80  
 ```
 
-Note that the username required here is the one for your ESDC network. For example, npm config set proxy http://jayson.mcintosh@proxy.prv:80
+Note that the username required here is the one for your ESDC network. For example, if the username for the ESDC network is FirstName.Lastname, set the npm config set proxy at http://FirstName.LastName@proxy.prv:80.
 
-Run npm commands from node. Ensure you are in the same folder as package.json
+Run npm commands from node. Ensure you are in the same folder as package.json.
 
 ```bash
 npm run test
@@ -161,13 +161,14 @@ git add . && git commit -m 'I have made local changes' && git push origin master
 A merge conflict can also be resolved on GitHub. [Learn here](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github).
 
 ## How to create an issue?
-Github Help Guide: https://help.github.com/en/articles/creating-an-issue
+You can create an issue on the GitHub repository to track and prioritize your work. For more instructions, go to the [Github Help Guide](https://help.github.com/en/articles/creating-an-issue).
 
 ## How to collaborate with team through pull requests?
-[Learn more](https://help.github.com/en/articles/commenting-on-a-pull-request)
+A pull request may be created to push the work/changes made on one branch to the master branch.
 
-Adding your comments to the conversation through permalinks
-[Learn more](https://help.github.com/en/articles/creating-a-permanent-link-to-a-code-snippet)
+You can also collaborate with team through line commenting, starting a review or simply leaving a general comment on the pull requests. [Learn more](https://help.github.com/en/articles/commenting-on-a-pull-request) about how to leave a comment and resolve conversations in a pull request.
+
+In md files, you can link your comments to specific sections/lines in a conversation through permalinks. [Learn more](https://help.github.com/en/articles/creating-a-permanent-link-to-a-code-snippet) how to create permalinks.
 
 ## Formatting in markdown files
 Standard formatting rules in a markdown file can be viewed here: https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md. 
