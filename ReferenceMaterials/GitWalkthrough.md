@@ -120,7 +120,7 @@ You will be required to type in your username and password. Password field will 
 
 This will also merge your changes to the document with the remote repository. In case, there is a conflict due to competing line changes, an error message will appear indicating the file where the conflict appears. 
 
-Jump to "How to resolve conflict?" to learn about resolution process
+Jump to [How to resolve conflict?](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#how-to-resolve-conflict) to learn about resolution process.
 
 ### How to run [tests](https://github.com/sara-sabr/ITStrategy#development)? 
 Install [node](https://www.npmjs.com/get-npm) same place where Git is installed. 
