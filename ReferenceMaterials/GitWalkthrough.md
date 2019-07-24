@@ -31,7 +31,8 @@ You can also create a branch using Git bash. Here are the steps:
 git checkout -b <BranchName>
 ```
 
-This creates a new branch in the local repository and also switches between the branch that can be edited on your local repository.  
+This creates a new branch in the local repository and also switches between the branch that can be edited on your local repository.
+
 3. To push the new branch on the remote repository, use the [pull] (Add link here) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
 
 ### Creating a fork
@@ -54,6 +55,7 @@ mkdir FolderName
 ```
 
 Skip the step, if you have already created a folder to save the repository. 
+
 4. Clone the repository using git clone command into the folder (directory name) on your local machine
 
 ```bash
@@ -120,7 +122,7 @@ You will be required to type in your username and password. Password field will 
 
 This will also merge your changes to the document with the remote repository. In case, there is a conflict due to competing line changes, an error message will appear indicating the file where the conflict appears. 
 
-Jump to [How to resolve conflict?](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#how-to-resolve-conflict) to learn about resolution process.
+Jump to [How to resolve a conflict?](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#how-to-resolve-conflict) to learn about resolution process.
 
 ### How to run [tests](https://github.com/sara-sabr/ITStrategy#development)? 
 Install [node](https://www.npmjs.com/get-npm) same place where Git is installed. 
@@ -142,7 +144,7 @@ Run npm commands from node. Ensure you are in the same folder as package.json.
 npm run test
 ```
 
-## How to resolve conflict?
+## How to resolve a conflict?
 Open the local files where the conflict appears.
 
 The picture below shows the appearance of conflict in the file. The competing changes are separate by conflict markers <<<<<<<, =======, >>>>>>>.
