@@ -172,8 +172,12 @@ You can also collaborate with team through line commenting, starting a review or
 
 You can link your comments to specific sections/lines in a conversation through permanent links. [Learn more](https://help.github.com/en/articles/creating-a-permanent-link-to-a-code-snippet) how to create permalinks.
 
-To reveal the permanent link for a md file on GitHub, press "y". The URL of the file will change to show the [permalink](https://help.github.com/en/articles/getting-permanent-links-to-files). This can also be used to link specific lines or a group of lines. For example:
+To reveal the permanent link for a md file on GitHub, press "y". The URL of the file will change to show the [permalink](https://help.github.com/en/articles/getting-permanent-links-to-files). This can also be used to link specific lines or a group of lines. 
+
+> To create a permalink for line 89 add #L89 at the end of the file permalink
 https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89
+
+> To create a permalink for line 89 to 90 add #L89-L90 at the end of the file permalink
 https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89-L90
 
 ## Formatting in markdown files
