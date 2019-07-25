@@ -19,12 +19,18 @@ Here are the steps to create a new repository through your GitHub account:
 > Once the repository is created or you are added to one of the already created repository, clone the repository on your computer to make changes locally.
 
 ### Creating a branch 
-Each repository has a default master branch. In case you need to create new branches, create a branch using the branch menu selector on the GitHub repository page. 
+Each repository has a default master branch. New branches can be created using GitHub as well as Git Bash.
+
+**Creating a branch on GitHub Repo page**
+A new branch can be created using the branch menu selector on the GitHub repository page. 
 [Learn more](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository)
+
 In this case, the branch is created on the GitHub repository. You will need to [fetch](https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89) the changes on your local repository to work on the branch locally.
 
-You can also create a branch using Git bash. Here are the steps:
+**Creating a branch using Git Bash**
+To create a branch using Git bash, follow the below instructions:
 1. Go to the local directory where you have created a copy of the repository and open Git Bash here.
+
 2. To create a new branch in this repository, type the following in Git Bash
 
 ```bash
@@ -70,13 +76,13 @@ Before cloning, make sure that you are in the correct directory.
 Go to the local repository folder and right click to open Git bash here. This will ensure that you are in the right directory. Alternatively, you can come to the right directory by using the change directory command (cd) in Git Bash. 
 
 ### Pull
-Bringing all the changes from the remote repository to the local repository (this will pull from the master branch)
+Pull command is used to sync all the changes from the remote repository to the local repository. In the example below, the pull command will pull from the master branch.
 
 ```bash
 git pull origin master
 ```
 
-To suggest any changes on the files, create a [new branch] (Add a link to the document section above). This can be done through GitHub as well as using Git Bash. 
+As a good practice for suggesting any changes on the master files, create a [new branch](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#creating-a-branch) and make changes there. This can be done through GitHub as well as using Git Bash. 
 
 Using the following command through Git Bash will create a new branch and switch your local repository to this branch.
 
