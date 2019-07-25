@@ -37,9 +37,9 @@ To create a branch using Git bash, follow the below instructions:
 git checkout -b <BranchName>
 ```
 
-This creates a new branch in the local repository and also switches between the branch that can be edited on your local repository.
+Using this command will create a new branch and switch your local repository to this branch. Now your local repository is setup to be in <BranchName>. All the edits will happen in this branch, not on master. 
 
-3. To push the new branch on the remote repository, use the [pull] (Add link here) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
+3. To push the new branch on the remote repository, use the [pull](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#pull) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
 
 ### Creating a fork
 A fork is a copy of a repository to your user account or an organization's account. Forking a repository allows you to freely experiment with changes without affecting the original project. To create a fork, click 'Fork' on the main page of the GitHub repository.  
@@ -53,7 +53,9 @@ Please note that to work locally, you will have to clone the repository to your 
 
 ## How to clone a project?
 1. Click "Clone or download" and copy the URL of the remote repository
+
 2. Go to the location on your computer where you would like to create the local repository and open Git Bash here.
+
 3. Create a directory where you want to save the local version of the repository
 
 ```bash
@@ -75,22 +77,16 @@ Before cloning, make sure that you are in the correct directory.
 ## What is the common workflow?
 Go to the local repository folder and right click to open Git bash here. This will ensure that you are in the right directory. Alternatively, you can come to the right directory by using the change directory command (cd) in Git Bash. 
 
-### Pull
+### Pull or Fetch
 Pull command is used to sync all the changes from the remote repository to the local repository. In the example below, the pull command will pull from the master branch.
 
 ```bash
 git pull origin master
 ```
 
-As a good practice for suggesting any changes on the master files, create a [new branch](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#creating-a-branch) and make changes there. This can be done through GitHub as well as using Git Bash. 
+As a good practice for suggesting any changes on the master files, create a [new branch](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#creating-a-branch) and make changes there. 
 
-Using the following command through Git Bash will create a new branch and switch your local repository to this branch.
-
-```bash
-git checkout -b <BranchName>
-```
-
-Now your local repository is setup to be in <BranchName>. All the edits will happen in this branch, not on master. 
+Alternatively, fetch command may be used to sync the changes made on the remote repository with the local repository. Remember that Fetch only brings the changes to local repository but does not merge. To merge the changes, ...
 
 To simply fetch an already created branch to the local repository, use the following commands,
 
@@ -108,7 +104,7 @@ git checkout <BranchName>
 [Learn more](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
 ### Push 
-Saving all the changes made on the local repository to the remote repository
+Push command enables you to save all the changes made on the local repository to the remote repository
 
 ```bash
 git add . && git commit -m "I have made local changes" && git push -u origin <BranchName>
