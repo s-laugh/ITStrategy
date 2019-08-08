@@ -183,10 +183,14 @@ You can link your comments to specific sections/lines in a conversation through 
 To reveal the permanent link for a md file on GitHub, press "y". The URL of the file will change to show the [permalink](https://help.github.com/en/articles/getting-permanent-links-to-files). This can also be used to link specific lines or a group of lines. 
 
 > For example:
+
 > To create a permalink for line 89 add #L89 at the end of the file permalink
-https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89
+
+> https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89
+
 > To create a permalink for line 89 to 90 add #L89-L90 at the end of the file permalink
-https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89-L90
+
+> https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89-L90
 
 ## Formatting in markdown files
 Standard formatting rules in a markdown file can be viewed here: https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md. 
@@ -200,23 +204,40 @@ Standard formatting rules in a markdown file can be viewed here: https://github.
 
 ## List of commonly used commands
 cd
+
 ll
+
 ls
+
 mkdir
+
 Git clone
+
 History
+
 Git pull origin master
+
 Git status
+
 Git add .
+
 Git commit -m "Comment goes here"
+
 Git push origin master
+
 Reset
+
 Revert
+
 Checkout
+
 Fetch
+
 Merge
 
 ## References
 [Github help guide](https://help.github.com/en) 
+
 [Atlassian Git tutorial]( https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+
 [Github Guides - Hello World Exercise](https://guides.github.com/activities/hello-world/)
