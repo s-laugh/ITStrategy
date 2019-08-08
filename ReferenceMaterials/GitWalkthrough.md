@@ -236,6 +236,8 @@ Fetch
 
 Merge
 
+A complete list of Git commands can be seen [here](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
+
 ## References
 [Github help guide](https://help.github.com/en) 
 
