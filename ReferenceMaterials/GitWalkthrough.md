@@ -28,12 +28,14 @@ Here are the steps to create a new repository through your GitHub account:
 Each repository has a default master branch. New branches can be created using GitHub as well as Git Bash.
 
 **Creating a branch on GitHub Repo page**
+
 A new branch can be created using the branch menu selector on the GitHub repository page. 
 [Learn more](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository)
 
 In this case, the branch is created on the GitHub repository. You will need to [fetch](https://github.com/sara-sabr/ITStrategy/blob/08f711a1b0116848468bd798e9cdf55f76e7f19c/ReferenceMaterials/GitWalkthrough.md#L89) the changes on your local repository to work on the branch locally.
 
 **Creating a branch using Git Bash**
+
 To create a branch using Git bash, follow the below instructions:
 1. Go to the local directory where you have created a copy of the repository and open Git Bash here.
 
@@ -48,8 +50,7 @@ Using this command will create a new branch and switch your local repository to 
 3. To push the new branch on the remote repository, use the [pull](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#pull) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
 
 ### Creating a fork
-A fork is a copy of a repository to your user account or an organization's account. Forking a repository allows you to freely experiment with changes without affecting the original project. To create a fork, click 'Fork' on the main page of the GitHub repository.  
-[Learn more](https://help.github.com/en/articles/fork-a-repo)
+A fork is a copy of a repository to your user account or an organization's account. Forking a repository allows you to freely experiment with changes without affecting the original project. To create a fork, click 'Fork' on the main page of the GitHub repository. [Learn more](https://help.github.com/en/articles/fork-a-repo)
 
 Once the fork is created, configure a remote pointing an upstream repository to sync any changes between the fork and the original repository. [Learn more](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)
 
