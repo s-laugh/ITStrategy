@@ -37,9 +37,9 @@ In this case, the branch is created on the GitHub repository. You will need to [
 **Creating a branch using Git Bash**
 
 To create a branch using Git bash, follow the below instructions:
-1. Go to the local directory where you have created a copy of the repository and open Git Bash here.
+- Go to the local directory where you have created a copy of the repository and open Git Bash here.
 
-2. To create a new branch in this repository, type the following in Git Bash
+- To create a new branch in this repository, type the following in Git Bash
 
 ```bash
 git checkout -b <BranchName>
@@ -47,7 +47,7 @@ git checkout -b <BranchName>
 
 Using this command will create a new branch and switch your local repository to this branch. Now your local repository is setup to be in <BranchName>. All the edits will happen in this branch, not on master. 
 
-3. To push the new branch on the remote repository, use the [pull](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#pull) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
+- To push the new branch on the remote repository, use the [pull](https://github.com/sara-sabr/ITStrategy/blob/HowToUseGit/ReferenceMaterials/GitWalkthrough.md#pull) command on Git Bash. This will replicate the changes made on the local repository to the remote repository.
 
 ### Creating a fork
 A fork is a copy of a repository to your user account or an organization's account. Forking a repository allows you to freely experiment with changes without affecting the original project. To create a fork, click 'Fork' on the main page of the GitHub repository. [Learn more](https://help.github.com/en/articles/fork-a-repo)
@@ -59,11 +59,11 @@ Sync the fork of a repository to keep it up-to-date with the upstream repository
 Please note that to work locally, you will have to clone the repository to your computer.
 
 ## How to clone a project?
-1. Click "Clone or download" and copy the URL of the remote repository
+- Click "Clone or download" and copy the URL of the remote repository
 
-2. Go to the location on your computer where you would like to create the local repository and open Git Bash here.
+- Go to the location on your computer where you would like to create the local repository and open Git Bash here.
 
-3. Create a directory where you want to save the local version of the repository
+- Create a directory where you want to save the local version of the repository
 
 ```bash
 mkdir FolderName
@@ -71,7 +71,7 @@ mkdir FolderName
 
 Skip the step, if you have already created a folder to save the repository. 
 
-4. Clone the repository using git clone command into the folder (directory name) on your local machine
+- Clone the repository using git clone command into the folder (directory name) on your local machine
 
 ```bash
 git clone <URL of remote repository>
