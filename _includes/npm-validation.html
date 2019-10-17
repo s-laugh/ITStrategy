@@ -1,0 +1,32 @@
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#packageInfo").html("");
+    var packageName = $("#packageName").val();
+    $.getJSON("https://api.npms.io/v2/package/" + packageName, function(result){
+      $("#packageInfo2").append("<p>Licence: " + result.collected.metadata.license + "</p>");
+      $("#packageInfo2").append("<p>devDependencies:</p><ul>");
+      $.each( result.collected.metadata.devDependencies, function( key, val ) {
+       $("#packageInfo2").append("<li>" + key + "</li>");
+      });
+      $("#packageInfo2").append("</ul>");
+    });
+  });
+});
+</script>
+
+<form>
+  <div class="form-group">
+    <label for="packageName">NPM package</label>
+    <input type="text" class="form-control" id="packageName" placeholder="example">
+  </div>
+  <button type="button" class="btn btn-primary">Submit</button>
+</form>
+
+<h3>libraries.io</h3>
+<div id="packageInfo1"></div>
+
+<h3>npms.io</h3>
+<div id="packageInfo2"></div>
+
+<br/>
