@@ -35,6 +35,9 @@
     },
     {
       "pattern": "https://www.youtube.com"
+    },
+    {
+      "pattern": "https://gccode.ssc-spc.gc.ca"
     }
   ]
 }
