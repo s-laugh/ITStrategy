@@ -4,9 +4,6 @@
       "pattern": "http://esdc.prv"
     },
     {
-      "pattern": "http://edsc.prv"
-    },
-    {
       "pattern": "http://www.esdc.prv"
     },
     {
@@ -38,6 +35,66 @@
     },
     {
       "pattern": "https://www.youtube.com"
+    },
+    {
+      "pattern": "https://www.box.com/"
+    },
+    {
+      "pattern": "https://cloudup.com/"
+    },
+    {
+      "pattern": "https://www.cloudme.com/"
+    },
+    {
+      "pattern": "https://www.dropbox.com/"
+    },
+    {
+      "pattern": "https://framadrop.org/"
+    },
+    {
+      "pattern": "https://docs.google.com/"
+    },
+    {
+      "pattern": "https://drive.google.com"
+    },
+    {
+      "pattern": "https://www.google.com/forms/"
+    },
+    {
+      "pattern": "https://gmail.google.com/"
+    },
+    {
+      "pattern": "https://hangouts.google.com/webchat/start"
+    },
+    {
+      "pattern": "https://www.linshare.org/"
+    },
+    {
+      "pattern": "https://demo.lufi.io"
+    },
+    {
+      "pattern": "https://onedrive.live.com/"
+    },
+    {
+      "pattern": "https://owncloud.org/"
+    },
+    {
+      "pattern": "https://www.pcloud.com/"
+    },
+    {
+      "pattern": "https://riot.im/app/"
+    },
+    {
+      "pattern": "https://open.rocket.chat/"
+    },
+    {
+      "pattern": "https://www.seafile.com/"
+    },
+    {
+      "pattern": "https://www.sync.com/"
+    },
+    {
+      "pattern": "https://woelkli.com/"
     }
   ]
 }
