@@ -1,33 +1,8 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="{% if page.lang == 'en' %}{{ site.baseurl }}/{{ site.index.en }}{% else %}{{ site.baseurl }}/{{ site.index.fr }}{% endif %}">{{ site.title[page.lang] }}</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu1" aria-controls="Menu1" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="Menu1">
-      <!-- Menu -->
-      <ul class="navbar-nav mr-auto">
-        {%- assign pages=site.pages | where:"ref", "documents" | sort: 'lang' -%}
-        {%- for my_page in pages -%}
-          {% if my_page.lang == page.lang %}
-            <li class="nav-item"><a class="nav-link" lang="{{ my_page.lang }}" hreflang="{{ my_page.lang }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ site.docsTitle[my_page.lang] }}</a></li>
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- assign pages=site.pages | where:"ref", "blog-posts" | sort: 'lang' -%}
-        {%- for my_page in pages -%}
-          {% if my_page.lang == page.lang %}
-            <li class="nav-item"><a class="nav-link" lang="{{ my_page.lang }}" hreflang="{{ my_page.lang }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ site.blogPosts[my_page.lang] }}</a></li>
-          {%- endif -%}
-        {%- endfor -%}
-      
-      </ul>
-			<!-- Navigation -->
+      <!-- Navigation -->
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a href="#home" class="navbar-brand"><img src="img/nuno.png" alt=""></a>
+          <a href="#home" class="navbar-brand" href="#">IT Strategy</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
@@ -42,15 +17,23 @@
                     About us
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Mandate</a>
+                    <a class="dropdown-item" href="#">Where do we come from?</a>
+                    <a class="dropdown-item" href="#">Our references</a>
                   </div>
-                  </li>	
-              <li class="nav-item">
-                <a href="#" class="nav-link">Our Strategies (Ongoing)</a>
-              </li>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Our Strategies 
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="strategy-summary.md">Strategy Map</a>
+                      <a class="dropdown-item" href="it-picture-medium-term.md">IT Picture - Medium Term</a>
+                      <a class="dropdown-item" href="it-picture-long-term">IT Picture - Long Term</a>
+                      <a class="dropdown-item" href="strategies-actions.md">IT Strategies and Action</a>
+                      <a class="dropdown-item" href="enable-learning.md">Strategy Continous Learning</a>
+                    </div>
+                    </li>		
               <li class="nav-item">
                 <a href="#portfolio" class="nav-link">Work in Progress</a>
               </li>
@@ -61,6 +44,9 @@
                 <a href="#" class="nav-link">Our Blog Posts</a>
               </li>
                 <a href="#contact" class="nav-link">Contact Us</a>
+              </li>
+              </li>
+                <a href="#contact" class="nav-link">Français</a>
               </li>
             </ul>
           </div>
