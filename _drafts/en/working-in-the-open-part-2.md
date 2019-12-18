@@ -29,6 +29,8 @@ However, it is possible to open up your workspace and enable others to contribut
 
 ### Security
 
+### Information Management
+
 ### Privacy
 
 ### Accessibility
