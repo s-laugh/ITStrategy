@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Working in the Open: Part 1"
-ref: working-in-the-open-p1
+title:  "Working in the Open: Part 2"
+ref: working-in-the-open-p2
 lang: en
 author: "Guillaume Charest"
 date: "2019-11-10"
