@@ -28,7 +28,7 @@ Often in large organizations the following set of events is common place
 1. We identify a problem
 2. Create team X to rectify said problem, and said team becomes "responsible" for ensuring "compliance"
 3. Team X creates a process to steamline their approach to solving said problem
-4. Henceforth, all teams must go through team X in order to ensure said process is followed
+4. Henceforth, all teams must go through team X in order to ensure said process is followed for consistency
 
 Often when digging through process documentation one may find phrases something akin to "this process is intended such that all requests must go through it in order to ensure create a deterministic and consistent process". That sounds like a good thing, right?
 
@@ -46,9 +46,35 @@ Another example would the Chaos Monkey, from Netflix. Everyone who has worked in
 
 In order to realize these new ways of working, as illustrated in the two above examples with Intuit and Netflix organizationals must adjust. To enable the changes that must take place both the skillsets (through [continuous learning](https://sara-sabr.github.io/ITStrategy/2019/10/15/case-continuous-improvement.html)) and organization must evolve with the constantly changing possibilites that emerge as new technologies are created.
 
-All right then, we all want to be able to make thousands of changes per day to our production environments, and run Chaos Monkey on our production networks to ensure maximal stability, but I work in a highly regulated, large institution that isn't anywhere near capable of doing the aforementioned approaches. Where do I start?
+All right then, we all want to be able to make thousands of changes per day to our production environments, and run Chaos Monkey on our production networks to ensure maximal stability. But hey, I hear you say, I work in a large highly regulated institution that isn't anywhere near capable of doing the aforementioned approaches (yet). Where do I start? How does my organization go from what is intuitive to what is possible?
 
 ## Where to Start: Engineering Organizations
+
+Modern software has the fortunate attribute that it can be easily modified, rebuilt, and deployed, at will. Unfortunately, this is not so with many organizations (although this can be mitigated by adopting a culture of continuous learning). Change is difficult. Adopting new procedures and processes is a several year long task. So how can we be confident our approach is the right one before dedicating ourselves to the arduous task of pushing for change? I find it curious that when it comes to building complex systems like satellites, or networks, we incorporate all the mathamatical and engineering mastery we can muster -- to great results. When it comes to organizations we often seem to settle for hand wavey justifications based on beliefs or experience. This is not sufficient. If we have the tools to design robust networks and complex systems, why can we not apply the same rigour to our organizations?
+
+Given the difficulty in changing existing organizations, in order to guide decisions, I find it best to identify a basic axiom and apply it a given situation. If you have picked a good, simple, and reliable, axiom then when the axiom does not align with a given situation, change the situation. Here's an example. My axiom for the below case is that a series network is less reliable than a parallel (assuming an equal reliability for each node), and we will use this simple (and proveable claim) to redesign our approach to process within our organizations.
+
+![A Series Network]({{site.baseurl}}/assets/images/seriesnetwork.PNG)
+reliability = _1-(1-r^n)_
+
+![A Parallel Network]({{site.baseurl}}/assets/images/parallelnetwork.PNG)
+reliability = _1-(1-r)^n_
+
+_For a quick hand wavey demonstration, assuming each node has an identical reliability of r and assuming r = 0.9, then_
+
+_Series Network_ = 1-(1-0.9^2) = 0.81
+
+_Parallel Network_ = 1-(1-r)^2 = 0.99
+
+_We see here that the parallel network becomes more reliabile with each added node, while a series network becomes less reliable_
+
+In the [above section](#CurrentSituation) we identified a common situation where an intuitive set of steps was taken in order to address a problem. Looking at that same situation again, which kind of network have we just created? Unfortunately, a series network. To make matters worse, we ensured that "all teams must go through team X in order to ensure said process". If the process is indeed solving a problem, or addressing a need, many teams within the department are going to want to go through this process. As demand increases, by design, there is nowhere else for the organization to turn. You must wait, or go rogue (which, if you have processes like these, many more people are already doing than most organizations would be comfortable admitting). As demand increases, the load on the team grows, queues begin to form, and then processes within processes emerge, each with their own overhead, in order to triage requests by priority, resulting in many in the organization waiting years to get even a small request through. From the perspective of a user this process is peculiar, as even small requests seem to get caught up in this bottle neck, as the small requests get consistently bumped in priority for big ticket items that the overworked team responsible for this process is desparately trying to cope with. Okay okay, so it's a mess. What to do? Create a parallel network.
+
+When everything, including small repetitive tasks, needed to be done manually by humans the appeal for one process which everyone can follow without variation have an undenyable appeal. However, one of the strengths of automation is that these "small easy requests" that get backed up in the queue described above can be easily automated. The answer then, address the low hanging fruit and create automated processes. What would our network look like now, and what would its reliability be?
+
+Below is the intuitive process we have defined above
+
+![An example process]({{site.baseurl}}/assets/images/simpleSeriesProcess.png)
 
 ## Working in the Open
 
