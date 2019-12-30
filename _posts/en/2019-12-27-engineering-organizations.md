@@ -66,7 +66,7 @@ _For a quick hand wavey demonstration, assuming each node has an identical relia
 
 _Series Network_ = 1-(1-0.9^2) = 0.81
 
-_Parallel Network_ = 1-(1-r)^2 = 0.99
+_Parallel Network_ = 1-(1-0.9)^2 = 0.99
 
 _We see here that the parallel network becomes more reliabile with each added node, while a series network becomes less reliable_
 
@@ -76,11 +76,21 @@ When everything, including small repetitive tasks, need to be done manually by h
 
 So _do_ we do? Creating the process didn't work. Creating new teams to assist with the process didn't work. What to try next? Create parallel networks.
 
-One of the strengths of automation is that these "small easy requests" that get backed up in the queue described above can be easily automated. The answer then, address the low hanging fruit and create automated processes. What would our network look like now, and what would its reliability be?
+One of the strengths of automation is that these "small easy requests" that get backed up in the queue described above can often be easily automated, or at least some subset of them can be. The answer then, is to address the low hanging fruit and create an automated processes. What would our network look like now, and what would its reliability be?
 
-Below is the intuitive process we have defined above
+Below is the intuitive process we have defined above looks something like this
 
 ![An example process]({{site.baseurl}}/assets/images/simpleSeriesProcess.png)
+
+Let's assume the capacity for this process is 100 requests per year (only because 100 is an easy number to work with). Assuming a reliability of 95%. This number is likely accurate, bordering on generous. For example, please refer to some of the digits referred to [here](https://backend.orbit.dtu.dk/ws/portalfiles/portal/10626190/Report_on_HRA_for_Banedanmark_v_2_02_Final_Issue.pdf) or [here](https://www.lifetime-reliability.com/cms/tutorials/reliability-engineering/human_error_rate_table_insights/), though there are many human reliability data banks available to confirm this value. Keeping in mind that each 'request' likely involves many different steps, each of which have a likelihood of failure.
+
+Using a 95% reliability for each node gives us a reliability of
+
+_Series Network_ = 1-(1-0.95^7) = 0.698 ~= 0.7
+
+Meaning if that we put 100 requests through this process, we expect that roughly 70% will be completed successfuly on the first try. In all likelihood, failed requests in this circumstance will either be rejected, or have to re-enter the process at some particular step, increasing the load on the process without increasing its efficiency as some of the 100 requests being processed will actually be the same request twice. Given that, 70 successful requests is generous, as we are assuming we are not substracting from the 100 for requests that needed to be processed twice.
+
+![First Attempt: Parallelized]({{site.baseurl}}/assets/images/firstparallel.png)
 
 ## Working in the Open
 
