@@ -151,6 +151,8 @@ For more on working in the open, I suggest the following blog, [Working in the O
 
 So how does this approach assist us with making our processes more reliable? Let's take a look. Our process would now look something like this
 
+![Triple Parallel Process]({{site.baseurl}}/assets/images/tripleParallelProcess.png)
+
 ## Closing Thoughts
 
 ## References
