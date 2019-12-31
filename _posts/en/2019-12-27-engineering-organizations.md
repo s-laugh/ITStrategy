@@ -50,11 +50,13 @@ All right then, we all want to be able to make thousands of changes per day to o
 
 ## Where to Start: Engineering Organizations
 
-Modern software has the fortunate attribute that it can be easily modified, rebuilt, and deployed, at will. Unfortunately, this is not so with many organizations. Change is difficult in large organizations. Adopting new procedures and processes can be a several year endeavour. So how can we be confident our approach is the right one before dedicating ourselves to the arduous task of pushing for change? I find it curious that when it comes to building complex systems like satellites, or networks, we incorporate all the mathamatical and engineering rigour we can muster to great results. When it comes to organizations we often seem to settle for hand wavey justifications based on beliefs or experience. This is not sufficient. If we have the tools to design robust global networks and complex systems like satellites, why can we not apply the same rigour to properly engineering organizations?
+Modern software has the fortunate characteristic of being easily modifiable, rebuilt, and deployed, at will. Unfortunately, this is not so with many organizations. Change is difficult in large organizations. Adopting new procedures and processes can be a several year endeavour. So how can we be confident our approach is the right one before dedicating ourselves to the arduous task of pushing for change? I find it curious that when it comes to building complex systems like satellites, or networks, we incorporate all the mathamatical and engineering rigour we can muster to great results. When it comes to organizations we often seem to settle for hand wavey justifications based on beliefs or experience. This is not sufficient. If we have the tools to design robust global networks and complex systems like satellites, why can we not apply the same rigour to properly engineering organizations?
 
 In order to guide difficult decisions I find it best to identify a basic axiom and apply it to the world. If you have picked a good, simple, and reliable, axiom then when the axiom does not align with a given situation or circumstance, change the situation -- not the axiom.
 
 My axiom for how we should engineer our organizations is the below case where I submit that a series network is less reliable than a parallel network (assuming an equal reliability for each node), and we will use this simple (and proveable claim) to redesign our approach to solving problems within our organizations.
+
+_Both images borrowed from [Design Reliability - Fundamentals and Applications](https://www.amazon.com/Design-Reliability-Fundamentals-B-S-Dhillon/dp/0849314658)_
 
 ![A Series Network]({{site.baseurl}}/assets/images/seriesnetwork.PNG)
 reliability = _1-(1-r^n)_
@@ -92,7 +94,64 @@ Meaning if that we put 100 requests through this process, we expect that roughly
 
 ![First Attempt: Parallelized]({{site.baseurl}}/assets/images/firstparallel.png)
 
+In this model we are able to process the initial load (70 items), however we also have a parallel approval process able of addressing some subset of requests -- the low hanging fruit. For the sake of this article, let's assume that 10% of tasks fall into the category of low hanging fruit that is easily automatable. If that is the case, and assuming a modest 70% efficiency (that is to say, we are assuming our automated process is equally as reliable as our manual one), then we are able to successfully process another 7 (70% of 10 = .7 * 10 = 7) requests. Again, this is an extremely conservative estimate of the gained efficiency, given that the automated tool should be able to respond with approval or rejection within minutes, while the manual process likely takes weeks or months. Therefore, if we assume that we're measuring the number of approvals over some given time *t\*, we could safely (still conservatively) double the number of requests processed by the automated process, giving us 14 successfully approved requests. Though even ignoring these conservative increased efficiency estimates, we can see that with our parallel process we are able to process strictly greater than 77 (70 from the initial process, an 7 from the automated one) requests, rather than our previous 70 requests. Why were we able to keep the initial process processing 100 requests, then 7 requests were sent to the automated process? A few reasons.
+
+Firstly, when our processes are slow, arduous, and frustrating to our users, our users will stop using the process and just do what they need to do to get their job done. Compliance is a bonus for someone just trying to get work done. Their first and foremost goal, which will almost always take priority, is just getting the job done. That is to say, the process becomes more efficient you will get a better idea as to the actual activities of your department, as people will start using the official processes, resulting in more requests, and therefore better metrics organically collected from your organization.
+
+Secondly, as we defined in our moch process, this is the one funnel for all processes. Small tasks are getting bumped for high priority ones, meaning there is a long queue of requests waiting to be processed. As the process becomes more efficient one becomes to process extra requests that would have otherwise be waiting in the queue.
+
+The last observation here is that another added bonus of this new process is that by reducing the load on the manual process, the stress on the people responsible for the initial process is reduced, which will likely increase the reliability of the process or system. The queue still exists, so stress is not entirely removed, though as the queue of small ticket items gets reduced, the stress of an ever increasing number of requests diminishes, and the reliability of the system increases.
+
+![Human performance vs stress]({{site.baseurl}}/assets/images/stressreliability.PNG)
+
+As a result, we can bump up our reliability of the initial system due to the decreased stress, and therefore increased reliability.
+
+_Series Network_ = 1-(1-0.96^7) ~= 0.75
+
+Then we can add our 7 extra requests approved through the automated process (75 + 7), giving us 82 successfully processed requests. That's better! By addressing the low hanging fruit using a non-toil approach, we were able to bump up the number of successsfuly processed requests from 70 to 82, that's ~17% increase in productivity. This is easily anecdotally verifiable. If one goes to talk with their operation teams responsible for filtering or approving software, it doesn't take long to hear something along the lines of, "we would like to do more thorough checks, but we just don't have the time". What you are hearing there, is that the reliability of the process is reduced because the system is overstressed (for those of you who are mathamatically inclined and interested in learning more about stregth vs stress it is discussed in chapter 10 of [Design Reliability - Fundamentals and Applications](https://www.amazon.com/Design-Reliability-Fundamentals-B-S-Dhillon/dp/0849314658)).
+
+Keep in mind we are able to [continually improve](https://sara-sabr.github.io/ITStrategy/2019/10/15/case-continuous-improvement.html) our automated process until it is able to process much more than our initial iteration of 10%.
+
+One may critisize that in our model the manual process must go through committee approval while the automated process does not. Firstly, we reduced the efficiency of the automated process to the same as the manual process, so we can assume that each step of the automated process is 95% and that there are similar steps involved as the manual process. So not unfair advantage was given. However, it was drawn this way to underline an important point. If we want to achieve the Chaos Monkey situation discussed previously, or the thousands of changes to production a day by Amazon, we must be able to _fully automate_ our processes, from start to fininsh, without requiring human approval for each change. Mark Schwartz acknowledges this challenge in [War & Peace & IT](https://itrevolution.com/war-and-peace-and-it/) by explaining
+
+> ... there are also tensions between moving quickly and retaining control, between improvising and following a plan, and between the creation of new competitive advantages and the destruction of old ones. These opposites seem impossible to reconcile; it is war, with brief periods of peace as temporary accommodations are reached.
+
+Fully automated processes are a long way away for many of us. Though small low risk subsets of existing processes is the best place to start. Design the automated process in such a way that it can be approved by the committee, given that it will be truly deterministic. The committee approves the automated process, the committee does not approve each approval from the process. This prevents the creation of queues (where much time is lost) and moves us towards being able to more quickly process requests in an automated fashion, allowing us to more quickly respond to change (as is promoted in the [agile manifesto](https://agilemanifesto.org/iso/en/manifesto.html)).
+
+Alright, 70 to 82 (17% increase). That's a start, but we can still do better.
+
 ## Working in the Open
+
+[War & Peace & IT](https://itrevolution.com/war-and-peace-and-it/) Mark Schwartz quotes Christopher Avery's book _Responsible Change_ while discussing that "we must understand that we’re dealing with a complex system, where changes in one location might have unpredictable effects in another."
+
+> We can never direct a living system, only disturb it and wait to see the response. . . . We can’t know all the forces shaping an organization we wish to change, so all we can do is provoke the system in some way by experimenting with a force we think might have some impact, then watch to see what happens.
+
+Armed with this knowledge, we shall leverage working in the open to increase the reliability of our processes, and allow for continuous improvement of said process.
+
+Step 1: Make all documentation relating to the process open to everyone
+Step 2: Allow users to fill in the documentation on behalf of the teams responsible for the process
+
+- Optionally, the teams can maintain responsibility for "signing off" on the documentation filled out by the client, although ideally one should opt for a trust over control option.
+
+Step 3: Committee approves the request
+
+What are the advantages of this approach?
+
+**1 - It forces those responsible for the process to document their own processes thoroughly so anyone would be able to complete the checks.**
+
+**2- It enables your clients to understand the process**
+
+This aligns well with the [Agile Manifesto](https://agilemanifesto.org/iso/en/manifesto.html) which reads
+
+> Individuals and interactions over processes and tools
+
+Furthermore, the organization has many more skills at it's disposal than any individual team. Perhaps the expertise required to improve this process exists somewhere else within the organization. By exposing the process, and when coupled with continuous learning, would allow teams to help improve the process (even if entirely out of self interest to help them get their own requests through quicker). Keep in mind that people within the organization can only improve a process they understand, which is why it is important that the group(s) presently responsible for the process document their own processes thoroughly (as per number 1 above).
+
+For more on working in the open, I suggest the following blog, [Working in the Open: Part 1](https://sara-sabr.github.io/ITStrategy/2019/11/19/working-in-the-open-part-1.html)
+
+So how does this approach assist us with making our processes more reliable? Let's take a look. Our process would now look something like this
+
+## Closing Thoughts
 
 ## References
 
